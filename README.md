@@ -15,7 +15,7 @@ Includes data for 1869 BGC-metabolite links, gathered from MIBiG [1](https://mib
 Includes data gathered and cleaned from [3](https://zenodo.org/record/3985982#.YbjNSJFByV4). The naming inconsistensies of the original files in [3](https://zenodo.org/record/3985982#.YbjNSJFByV4) is a s**show, so some BGCs were dropped, leaving with 1151 BGCs.  
 
 * bgc_pfam.npy -- pfam vectors for BGCs
-* mol_fps.npy -- ecfp6 fingerprints vectors for natural products
+* mol_fps.npy -- ecfp6 fingerprint vectors for natural products
 * bio_class_of_bgcs.npy -- biosynthetic classes of the BGCs
 * molbgc_names.npy -- names of the BGCs/natural products in order
 * prismtans.csv -- median tanimoto coefficients of the PRISM 4 predictions  
