@@ -144,7 +144,6 @@ def get_iokr_inverse(K, lmbda):
 
 def get_iokr_preimage(k_preimg, K_y_preimg_set, inverse):
 
-    # [n, _] = K.shape
     [t, _] = K_y_preimg_set.shape
     end = np.dot(inverse, k_preimg)
     results = []
@@ -152,7 +151,7 @@ def get_iokr_preimage(k_preimg, K_y_preimg_set, inverse):
         results.append(np.dot(K_y_preimg_set[iii, :], end))
     return results
     
-    
+ 
     
 class cls_mmr_solver:
 
@@ -172,6 +171,7 @@ class cls_mmr_solver:
   ## ----------------------------------------------------
   def mmr_solver(self,Kx,Ky,C,D=0,qs0=None):
     """
+    Sandor Szedmak
     Taks: to solve the unbiased mmr problem
     Input: Kx   2d square array input kernel
            Ky   2d square array output kernel
