@@ -1,11 +1,18 @@
+An overall illustration of the topic; relationships between data and the prediction task. 
+
+![alt txt](https://github.com/minjoks/masters_thesis/blob/main/dataview.png?raw=true)
+
+
+
+
 **mibigdata**  
 Includes data for 1869 BGC-metabolite links, gathered from MIBiG [1](https://mibig.secondarymetabolites.org/download). There are 1383 unique BGCs in the links. The same row in bgc_pfams and mol_fps files corresponds to a link.
 
 
 * bgc_names_in_order.npy -- names of the BGCs in the links  
-* bgc_pfam.npy -- pfam vectors for BGCs 
+* bgc_pfam.npy -- pfam vectors for BGCs, size=[1869,2377] 
 * string_9_2.npy -- string kernel with parameters g=9 (g-kmer length) and m=2 (n.o. missing) [2](https://github.com/QData/FastSK)  
-* mol_fps.npy -- fingerprint vectors for metabolites 
+* mol_fps.npy -- fingerprint vectors for metabolites, size=[1869,2457]
 * fold_stratified.npy -- stratified 10 fold CV for the predictions (most practical)
 * bmfold.npy -- 10 fold CV, has all the same BGCs in the same fold (impractical)
 * mbfold.npy --  10 fold CV, has all the same metabolites in the same fold (impractical)
