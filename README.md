@@ -22,7 +22,7 @@ Includes data gathered and cleaned from [3](https://zenodo.org/record/3985982#.Y
 
 **running the experiments**  
 
-All of the experiments print top-1 to top-20 accuracies.  
+All of the experiments print top-1, top-5, top-10 and top-20 accuracies.  
 
 * output_prediction.py can be run with 
 ```console
