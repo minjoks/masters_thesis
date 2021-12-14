@@ -1,5 +1,5 @@
 **mibigdata**  
-Includes data for 1869 BGC-metabolite links, gathered from MIBiG [1](https://mibig.secondarymetabolites.org/download). There are 1383 unique BGCs in the links.  
+Includes data for 1869 BGC-metabolite links, gathered from MIBiG [1](https://mibig.secondarymetabolites.org/download). There are 1383 unique BGCs in the links. The same row in bgc_pfams and mol_fps files corresponds to a link.
 
 
 * bgc_names_in_order.npy -- names of the BGCs in the links  
