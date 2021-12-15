@@ -21,9 +21,9 @@ if __name__=="__main__":
     
     #link_list = np.load("/mibigdata/link_list.npy")
     #fold = np.load("/mibigdata/fold_stratified.npy")
-    bgc_kernel = np.load(path+"/mibigdata/bgc_kernel_svm.npy")
-    molecule_kernel = np.load(path+"/mibigdata/mol_kernel_svm.npy")
-    Y = np.load(path+"/mibigdata/Y_svm.npy")
+    bgc_kernel = np.load(path+"/bgc_kernel_svm.npy")
+    molecule_kernel = np.load(path+"/mol_kernel_svm.npy")
+    Y = np.load(path+"/Y_svm.npy")
     Y[Y==0]=-1
     
                 
@@ -34,7 +34,7 @@ if __name__=="__main__":
     
     for f in range(0,10):
     
-        folds=np.load(path+"/mibigdata/svmfolds/folds_"+str(f)+".npy")
+        folds=np.load(path+"/svmfolds/folds_"+str(f)+".npy")
            
         
         test_ids = np.array(np.where(folds==f)).squeeze()
