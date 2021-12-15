@@ -21,6 +21,7 @@ Includes data for 1869 unique BGC-metabolite links, gathered from MIBiG [1](http
 * link_list.npy -- link list of size=[1869,2], the first colum corresponds to a unique BGC and the second to a unique molecule (can be obtained from bgc_pfam and mol_fps)
 * bgc_kernel_tanimoto.npy -- pre-calculated tanimoto kernel for BGCs 
 * mol_kernel_tanimoto.npy -- pre-calculated tanimoto kernel for molecules
+* Y_svm.npy -- matrix of links for SVM implementation
 
 **prismdata**  
 Includes data gathered and cleaned from [3](https://zenodo.org/record/3985982#.YbjNSJFByV4). The naming inconsistensies of the original files in [3](https://zenodo.org/record/3985982#.YbjNSJFByV4) is a s**show, so some BGCs were dropped, leaving with 1151 BGCs.  
@@ -34,7 +35,7 @@ Includes data gathered and cleaned from [3](https://zenodo.org/record/3985982#.Y
 
 **running the experiments**  
 
-All of the experiments print top-1, top-5, top-10 and top-20 accuracies.  
+output_prediction and prism print top-1, top-5, top-10 and top-20 accuracies.  
 
 * output_prediction.py can be run with 
 ```console
@@ -49,6 +50,13 @@ you@you:~$ python prism.py path/to/prismdata [y]
 ```
 where the first argument is the datapath, and second can be chosen as 'y' for plots.  
 
+
+svm_linkprediction.py requires rlscore  [3](https://github.com/aatapa/RLScore) and saves the predictions to a file instead of printing anything
+* svm_linkprediction.py can be run with 
+```console
+you@you:~$ python svm_linkprediction.py path/to/mibigdata
+```
+
 **dependencies**  
 The following packages were used  
 
@@ -58,6 +66,6 @@ sklearn 1.10.1
 pandas 1.1.3  
 seaborn 0.23.2  
 matplotlib 3.3.2  
-
+rlscore
 
 
