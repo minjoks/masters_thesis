@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-# This is the basic setup for output prediction with a candidate list
+# This is the basic setup for output prediction (multi-output regression) with a candidate list
 #
 # Input arguments: 
 # S/B/M : S=stratifield fold setting, 
-#         B=fold_b has all the same BGCs in the same fold, used in the molecule->Bgc prediction as a "relaxed setting"
-#         M=fold_m has all the same molecules in the same fold, used in the Bgc->molecule prediction as a "relaxed setting"
+#         B=mbfold has all the same BGCs in the same fold, used in the molecule->Bgc prediction as a "relaxed setting"
+#         M=bmfold has all the same molecules in the same fold, used in the Bgc->molecule prediction as a "relaxed setting"
 # MtoB/BtoM : Prediction direction, MtoB=Molecule->Bgc, BtoM=Bgc->Molecule, denoted as X->y
 # mlp/IOKR/CCA/Homals/MMR : mlp=multilayer perceptron
 #                           IOKR=Input output kernel regression
@@ -30,9 +30,9 @@ if __name__=="__main__":
     if args[1]=="S":
         fold=np.load(path+"/fold_stratified.npy")
     elif args[1]=="B":
-        fold_b=np.load(path+"/fold_b.npy")
+        fold_b=np.load(path+"/mbfold.npy")
     elif args[1]=="M":
-        fold_m=np.load(path+"/fold_m.npy")
+        fold_m=np.load(path+"/bmfold.npy")
     else:
         print("Fold is not defined")
     
