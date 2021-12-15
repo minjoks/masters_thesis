@@ -51,7 +51,7 @@ you@you:~$ python prism.py path/to/prismdata [y]
 where the first argument is the datapath, and second can be chosen as 'y' for plots.  
 
 
-svm_linkprediction.py requires rlscore  [3](https://github.com/aatapa/RLScore) and saves the predictions to a file instead of printing anything
+svm_linkprediction.py requires rlscore  [4](https://github.com/aatapa/RLScore) and saves the predictions to a file instead of printing anything
 * svm_linkprediction.py can be run with 
 ```console
 you@you:~$ python svm_linkprediction.py path/to/mibigdata
