@@ -95,10 +95,13 @@ def homals(lG,ndim,niter,ldecomp, ndegree,test,train, cand, X_test, x_test, y_te
      # break
     err_prev=err_now
     
-    #Rename...
-  print("done")
+    
+  print("done one fold")
+
+  #rename lY and X
   lW=lY
   Z=X
+	
   z_tildes = np.zeros((len(test), ndim))
   xview = np.dot(cand[:,train], lW[2])
   sds = np.zeros((xview.shape[0], len(test)))
