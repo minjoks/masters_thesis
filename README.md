@@ -13,12 +13,14 @@ Includes data for 1869 unique BGC-metabolite links, gathered from MIBiG [1](http
 * bgc_pfam.npy -- pfam vectors for BGCs, size=[1869,2377] 
 * pfam_features.npy -- the protein family names used as features for BGCs, size=[2377]
 * string_9_2.npy -- string kernel with parameters g=9 (g-kmer length) and m=2 (n.o. missing) [2](https://github.com/QData/FastSK)  
-* mol_fps.npy -- fingerprint vectors for metabolites, size=[1869,2457]
+* mol_fps.npy -- fingerprint vectors for metabolites, size=[1869,2457]. Fingerprint vectors were originally 6191 in length, zero columns deleted. Calculated using chemistry development kit; klekota roth (4860)+substructure (307)+standard fingerprint of (1024). 
 * fold_stratified.npy -- stratified 10 fold CV for the predictions (most practical)
 * bmfold.npy -- 10 fold CV, has all the same BGCs in the same fold (impractical)
 * mbfold.npy --  10 fold CV, has all the same metabolites in the same fold (impractical)
 * molbgcsmiles.csv -- csv-file includig the names of the BGCs, metabolites, SMILES, bioclass. Includes duplicate links. 
-* link_list.npy -- link list of size=[1869,2], the first colum corresponds to a unique BGC and the second to a unique molecule
+* link_list.npy -- link list of size=[1869,2], the first colum corresponds to a unique BGC and the second to a unique molecule (can be obtained from bgc_pfam and mol_fps)
+* bgc_kernel_tanimoto.npy -- pre-calculated tanimoto kernel for BGCs 
+* mol_kernel_tanimoto.npy -- pre-calculated tanimoto kernel for molecules
 
 **prismdata**  
 Includes data gathered and cleaned from [3](https://zenodo.org/record/3985982#.YbjNSJFByV4). The naming inconsistensies of the original files in [3](https://zenodo.org/record/3985982#.YbjNSJFByV4) is a s**show, so some BGCs were dropped, leaving with 1151 BGCs.  
