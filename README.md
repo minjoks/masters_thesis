@@ -6,17 +6,19 @@ An overall illustration of the topic; relationships between data and the predict
 
 
 **mibigdata**  
-Includes data for 1869 BGC-metabolite links, gathered from MIBiG [1](https://mibig.secondarymetabolites.org/download). There are 1383 unique BGCs in the links. The same row in bgc_pfams and mol_fps files corresponds to a link.
+Includes data for 1869 unique BGC-metabolite links, gathered from MIBiG [1](https://mibig.secondarymetabolites.org/download). There are 1292 unique BGCs in the links. The same row in bgc_pfams and mol_fps files corresponds to a link.
 
 
-* bgc_names_in_order.npy -- names of the BGCs in the links (and bgc_pfam.npy) 
+* bgcnames.txt -- names of the BGCs in the links (and bgc_pfam.npy), there are several names for one BGC as the pfam representation of these BGCs was the same 
 * bgc_pfam.npy -- pfam vectors for BGCs, size=[1869,2377] 
+* pfam_features.npy -- the protein family names used as features for BGCs, size=[2377]
 * string_9_2.npy -- string kernel with parameters g=9 (g-kmer length) and m=2 (n.o. missing) [2](https://github.com/QData/FastSK)  
 * mol_fps.npy -- fingerprint vectors for metabolites, size=[1869,2457]
 * fold_stratified.npy -- stratified 10 fold CV for the predictions (most practical)
 * bmfold.npy -- 10 fold CV, has all the same BGCs in the same fold (impractical)
 * mbfold.npy --  10 fold CV, has all the same metabolites in the same fold (impractical)
-* bgc_metabolite_smiles.csv -- csv-file includig the names of the metabolites and SMILES
+* molbgcsmiles.csv -- csv-file includig the names of the BGCs, metabolites, SMILES, bioclass. Includes duplicate links. 
+* link_list.npy -- link list of size=[1869,2], the first colum corresponds to a unique BGC and the second to a unique molecule
 
 **prismdata**  
 Includes data gathered and cleaned from [3](https://zenodo.org/record/3985982#.YbjNSJFByV4). The naming inconsistensies of the original files in [3](https://zenodo.org/record/3985982#.YbjNSJFByV4) is a s**show, so some BGCs were dropped, leaving with 1151 BGCs.  
@@ -24,6 +26,7 @@ Includes data gathered and cleaned from [3](https://zenodo.org/record/3985982#.Y
 * bgc_pfam.npy -- pfam vectors for BGCs
 * mol_fps.npy -- ecfp6 fingerprint vectors for natural products
 * bio_class_of_bgcs.npy -- biosynthetic classes of the BGCs
+* fold.npy -- 10 fold CV 
 * molbgc_names.npy -- names of the BGCs/natural products in order
 * prismtans.csv -- median tanimoto coefficients of the PRISM 4 predictions  
 
