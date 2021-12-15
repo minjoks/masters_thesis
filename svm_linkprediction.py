@@ -34,7 +34,7 @@ if __name__=="__main__":
     
     for f in range(0,10):
     
-        folds=np.load(path+"/svmfolds/folds_"+str(f))
+        folds=np.load(path+"/svmfolds/folds_"+str(f)+".npy")
            
         
         test_ids = np.array(np.where(folds==f)).squeeze()
