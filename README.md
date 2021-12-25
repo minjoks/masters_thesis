@@ -24,7 +24,7 @@ Includes data for 1869 unique BGC-metabolite links, gathered from MIBiG [1](http
 * Y_svm.npy -- matrix of links for SVM implementation
 
 **prismdata**  
-Includes data gathered and cleaned from [3](https://zenodo.org/record/3985982#.YbjNSJFByV4). The naming inconsistensies of the original files in [3](https://zenodo.org/record/3985982#.YbjNSJFByV4) is a s**show, so some BGCs were dropped, leaving with 1151 BGCs.  
+Includes data gathered and cleaned from [3](https://zenodo.org/record/3985982#.YbjNSJFByV4). The naming inconsistensies of the original files in [3](https://zenodo.org/record/3985982#.YbjNSJFByV4) is a bad situation, so some BGCs were dropped, leaving with 1151 BGCs.  
 
 * bgc_pfam.npy -- pfam vectors for BGCs
 * mol_fps.npy -- ecfp6 fingerprint vectors for natural products
