@@ -1,4 +1,4 @@
-An overall illustration of the topic; relationships between data and the prediction task. 
+An overall illustration of the topic "Connecting Secondary Metabolites and Biosynthetic Gene Clusters"; relationships between data and the prediction task. 
 
 ![alt txt](https://github.com/minjoks/masters_thesis/blob/main/dataview.png?raw=true)
 
