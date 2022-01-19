@@ -1,4 +1,4 @@
-An overall illustration of the topic "Connecting Secondary Metabolites and Biosynthetic Gene Clusters"; relationships between data and the prediction task. 
+An overall illustration of the topic "Connecting Secondary Metabolites and Biosynthetic Gene Clusters" (sci_2021_oksanen_minna.pdf); relationships between data and the prediction task. 
 
 ![alt txt](https://github.com/minjoks/masters_thesis/blob/main/dataview.png?raw=true)
 
@@ -11,7 +11,7 @@ Includes data for 1869 unique BGC-metabolite links, gathered from MIBiG [1](http
 
 * bgc_pfam.npy -- pfam vectors for BGCs, size=[1869,2377] 
 * pfam_features.npy -- the protein family names used as features for BGCs, size=[2377]
-* * bgcnames.txt -- names of the BGCs in the links (and bgc_pfam.npy), there are several names for one BGC "line" as the pfam representation of these BGCs was the same 
+* bgcnames.txt -- names of the BGCs in the links (and bgc_pfam.npy), there are several names for one BGC "line" as the pfam representation of these BGCs was the same 
 * string_9_2.npy -- string kernel with parameters g=9 (g-kmer length) and m=2 (n.o. missing) [2](https://github.com/QData/FastSK)  
 * mol_fps.npy -- fingerprint vectors for metabolites, size=[1869,2457]. Fingerprint vectors were originally 6191 in length, zero columns deleted. Calculated using chemistry development kit; klekota roth (4860)+substructure (307)+standard fingerprint of (1024). 
 * fold_stratified.npy -- stratified 10 fold CV for the predictions (most practical)
